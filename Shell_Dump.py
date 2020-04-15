@@ -79,7 +79,7 @@ class Shell_Dump:
                  opt_1 = "x86"
                  opt_2 = "x64"
                  time.sleep(2)
-                 SELECT = str(raw_input("\n[@]Please Selcet x84 or x64 : "))
+                 SELECT = str(raw_input("\n[@]Please Selcet x86 or x64 : "))
                  print
                  if SELECT == opt_1 and  len(SELECT) == 3 : 
                        code = subprocess.call(['nasm','-f','elf32',"{}".format(self.file_cname),'-o','{}'.format(self.file1)])
