@@ -1,6 +1,11 @@
 # Shell_Dump
+* Shell_Dump.py the python script write by python2.7
+* the Shell_Dump heve to ojbdump assembly code Dedect the hex code from the objdump 
+## how to use
+* frist have assembly code 
+"""
 
-## Shell_Dump stpes
+##  Shell_Dump stpes
 
 
 
