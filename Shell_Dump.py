@@ -57,9 +57,10 @@ class Shell_Dump:
                 time.sleep(2)
                 self.path_copy = str(raw_input("\n[E]Please Enter The File Path Example.asm :")).strip()
                 self.fpath = shutil.copy(self.path_copy+self.file_cname,"./")
-                self.file1=str(self.file_cname + "_obj")
-                self.file2=str(self.file_cname + "_dump")
-                self.file3=str(self.file_cname + "_shellcode")
+                self.file1 = str(self.file_cname + "_obj")
+                self.file2 = str(self.file_cname + "_dump")
+                self.file3 = str(self.file_cname + "_shellcode")
+                self.file4 = str(self.file_name + "_Linker")
             except IOError :
                  time.sleep(2)
                  print"\n{O}SOMETHING IS WROING PLSEASE CHECK YOU FILE PATH{O}"
@@ -110,7 +111,7 @@ class Shell_Dump:
              time.sleep(2)        
              print "\n[W]The Linker Process Started [W]\n "
              time.sleep(2)
-             subprocess.call(['ld','-n','-o','txt','{}'.format(self.file1)])
+             subprocess.call(['ld','-n','-o','{}'.format(self.file4),'{}'.format(self.file1)])
              with open(self.file2,'w')as file:                 
                 stdout =  subprocess.call(['objdump','-d','{}'.format(self.file1)], stdout=file, stderr=file)   
           except KeyboardInterrupt:
