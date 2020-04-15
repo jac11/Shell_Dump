@@ -85,7 +85,7 @@ class Shell_Dump:
                            return self.IF_OPtion()
                        else:
                           time.sleep(2)
-                          print "\ntThe Object File x86 is Generated  !! "         
+                          print "\nThe Object File x86 is Generated  !! "         
                                                                                                          
                  elif SELECT == opt_2 and len(SELECT)==3:                  
                        code = subprocess.call(['nasm','-f','elf64',"{}".format(self.file_cname),'-o','{}'.format(self.file1)])                     
