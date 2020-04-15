@@ -65,7 +65,12 @@ class Shell_Dump:
                  time.sleep(2)
                  print"\n{O}SOMETHING IS WROING PLSEASE CHECK YOU FILE PATH{O}"
                  time.sleep(2)
-                 self.file_path()        
+                 self.file_path() 
+            except Exception:
+                 time.sleep(2)
+                 print"\n{O}SOMETHING IS WROING PLSEASE CHECK YOU FILE PATH{O}"
+                 time.sleep(2)
+                 self.file_path()                             
           except KeyboardInterrupt:
               print self.Banner
               exit()   
