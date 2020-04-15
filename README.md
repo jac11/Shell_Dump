@@ -2,9 +2,10 @@
 * Shell_Dump.py the python script write by python2.7
 * the Shell_Dump heve to ojbdump assembly code Dedect the hex code from the objdump 
 ## how to use
+
 * write assemble code "file.asm".
-* For exsambl .
 '''
+
 ;Hello world 
 
 ; assembly code
@@ -42,7 +43,7 @@ section .data
 
 ##  Shell_Dump stpes
 
-
+'''
 
               _____ _          _ _ _____                        
              /   __| |        | | |  __ \                       
@@ -76,8 +77,7 @@ ld: i386 architecture of input file `execve2.asm_obj' is incompatible with i386:
 
 "\xeb\x1a\x5e\x31\xc0\x88\x46\x07\x8d\x1e\x89\x5e\x08\x89"
 "\x46\x0c\xb0\x0b\x89\xf3\x8d\x4e\x08\x8d\x56\x0c\xcd\x80"
-"\xe8\xe1\xff\xff\xff\x2f\x62\x69\x6e\x2f\x73\x68\x4a\x41"
-"\x41\x41\x41\x4b\x4b\x4b\x4b"
+"\xe8\xe1\xff\xff\xff\x2f\x62\x69\x6e\x2f\x73\x68\x4a\x41\x41\x41\x41\x4b\x4b\x4b\x4b"
 
 					[@]++++++++++++++++++++++++++[@]
 
@@ -91,7 +91,8 @@ ld: i386 architecture of input file `execve2.asm_obj' is incompatible with i386:
              ____) | | | |  __/ | | |__| | |_| | | | | | | |_) |
             |_____/|_| |_|\___|_|_|_____/ \__,_|_| |_| |_| .__/ 
                                                          | |    
-                                                         |_|                       
+                                                         |_| 
+,,,							 
    
 ## Connect Me . 
 * administrator@jacstory.tech
