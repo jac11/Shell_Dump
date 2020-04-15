@@ -3,35 +3,6 @@
 
 ## how to use
 
-* write assemble code "file.asm".
-'''
-
-;Hello world 
-
-; assembly code
-
-global _start
-
-section .text
-
-_start:
-
-       mov eax,0x4  ;service foe syswrite
-       mov ebx,0x1  ;service to sysexit
-       mov ecx,char  ; load the staring 
-       mov edx,char1
-       int 0x80
-
-       mov eax,0x1
-       xor ebx,ebx
-       int 0x80
-
-
-section .data
-
-     char: db "Hello world"
-     char1 equ $ -char
-'''
 * Shell_Dump.py  will ask to Enter the name asm file 
 * Shell_Dump.py  will ask to Enter the path of the file asm
 * Shell_Dump.py  will ask to select x86 or x64 
