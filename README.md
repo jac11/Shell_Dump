@@ -2,8 +2,43 @@
 * Shell_Dump.py the python script write by python2.7
 * the Shell_Dump heve to ojbdump assembly code Dedect the hex code from the objdump 
 ## how to use
-* frist have assembly code 
-"""
+* write assemble code "file.asm".
+* For exsambl .
+'''
+;Hello world 
+
+; assembly code
+
+global _start
+
+section .text
+
+_start:
+
+       mov eax,0x4  ;service foe syswrite
+       mov ebx,0x1  ;service to sysexit
+       mov ecx,char  ; load the staring 
+       mov edx,char1
+       int 0x80
+
+       mov eax,0x1
+       xor ebx,ebx
+       int 0x80
+
+
+section .data
+
+     char: db "Hello world"
+     char1 equ $ -char
+'''
+* Shell_Dump.py  will ask to Enter the name asm file 
+* Shell_Dump.py  will ask to Enter the path of the file asm
+* Shell_Dump.py  will ask to select x86 or x64 
+* Shell_Dump.py  will do nsam -f elf32 0r elf64 and will create file .o
+* Shell_Dump.py  will linker the assembly use 'ld -n - o 'and will create file have output
+* Shell_Dump.py  will use objdump - d and will save output file.txt
+* Shell_Dump.py  Will detect the shellcode from file.txt and save the shellcode in to file.txt and print the shellcode
+* shell_Dump.py  will save all file in to folder Shell_Dump and will print location of this file 
 
 ##  Shell_Dump stpes
 
@@ -56,5 +91,9 @@ ld: i386 architecture of input file `execve2.asm_obj' is incompatible with i386:
              ____) | | | |  __/ | | |__| | |_| | | | | | | |_) |
             |_____/|_| |_|\___|_|_|_____/ \__,_|_| |_| |_| .__/ 
                                                          | |    
-                                                         |_|   
-                     
+                                                         |_|                       
+   
+## Connect Me . 
+* administrator@jacstory.tech
+
+   
