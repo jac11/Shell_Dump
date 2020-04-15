@@ -60,7 +60,7 @@ class Shell_Dump:
                 self.file1 = str(self.file_cname + "_obj")
                 self.file2 = str(self.file_cname + "_dump")
                 self.file3 = str(self.file_cname + "_shellcode")
-                self.file4 = str(self.file_name + "_Linker")
+                self.file4 = str(self.file_cname + "_Linker")
             except IOError :
                  time.sleep(2)
                  print"\n{O}SOMETHING IS WROING PLSEASE CHECK YOU FILE PATH{O}"
