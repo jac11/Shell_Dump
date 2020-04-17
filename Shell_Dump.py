@@ -56,7 +56,6 @@ class Shell_Dump:
                 self.file_cname = str(raw_input("\n[X]Enter The File Name Example.asm : ")).strip()
                 time.sleep(2)
                 self.path_copy = str(raw_input("\n[E]Please Enter The File Path Example.asm :")).strip()
-                self.fpath = shutil.copy(self.path_copy+self.file_cname,"./")
                 self.file1 = str(self.file_cname + "_obj")
                 self.file2 = str(self.file_cname + "_dump")
                 self.file3 = str(self.file_cname + "_shellcode")
@@ -80,12 +79,14 @@ class Shell_Dump:
                  opt_2 = "x64"
                  time.sleep(2)
                  SELECT = str(raw_input("\n[@]Please Selcet x86 or x64 : "))
+                 self.fpath = shutil.copy(self.path_copy+self.file_cname,"./") 
                  print
                  if SELECT == opt_1 and  len(SELECT) == 3 : 
                        code = subprocess.call(['nasm','-f','elf32',"{}".format(self.file_cname),'-o','{}'.format(self.file1)])
                        if code == 1 :
                            print
                            print " [!] Instruction Not Completed Not Supported in 86-bit Mode [!]"
+                           print "\t\t\t\t\n [@] check the assembly code[#]"  
                            time.sleep(2)
                            return self.IF_OPtion()
                        else:
