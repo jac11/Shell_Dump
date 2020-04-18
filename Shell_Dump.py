@@ -56,6 +56,7 @@ class Shell_Dump:
                 self.file_cname = str(raw_input("\n[X]Enter The File Name Example.asm : ")).strip()
                 time.sleep(2)
                 self.path_copy = str(raw_input("\n[E]Please Enter The File Path Example.asm :")).strip()
+                self.fpath = shutil.copy(self.path_copy+self.file_cname,"./")
                 self.file1 = str(self.file_cname + "_obj")
                 self.file2 = str(self.file_cname + "_dump")
                 self.file3 = str(self.file_cname + "_shellcode")
