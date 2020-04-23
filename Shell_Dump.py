@@ -54,6 +54,12 @@ class Shell_Dump:
                 destntion = os.getcwd()
                 print
                 self.file_cname = str(raw_input("\n[X]Enter The File Name Example.asm : ")).strip()
+                if self.file_cname[-4::]==".asm":
+                   pass
+                else:
+                     time.sleep(2)
+                     print "\n[$ File Extension Not Correct ?[@]"
+                     return self.file_path()
                 time.sleep(2)
                 self.path_copy = str(raw_input("\n[E]Please Enter The File Path Example.asm :")).strip()
                 self.fpath = shutil.copy(self.path_copy+self.file_cname,"./")
